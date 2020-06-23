@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "giant-errorpages"
+version = "0.1.0"
+description = "A small package to trigger specific non-200 HTTP responses in a Django application."
+authors = ["Jon Atkinson <jon@giantmade.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/giantmade/giant-errorpages"
+repository = "https://github.com/giantmade/giant-errorpages"
+keywords = ["error", "404", "403", "500"]
+classifiers = [
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+include = [
+    "LICENSE",
+]
+packages = [
+    { include = "errorpages" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+black = "^19.10b0"
+django = "2.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
+
+[[tool.poetry.source]]
+name = "TestPyPi"
+url = "https://test.pypi.org/simple/"
+secondary = true
